@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Datum</title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                font-size: 64px;
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="zeit"></div>
+        <div id="datum"></div>
+    </body>
+    <script>
+        setInterval(datetime,1000)
+        function datetime(){
+        var d = new Date();
+        var ds = d.toDateString();
+        var ts = d.toTimeString();
+        var zeit = document.querySelector("#zeit");
+        zeit.innerHTML = ts;
+        var datum = document.querySelector("#datum");
+        datum.innerHTML = ds;
+    }
+        console.log(a)
+    </script>
+</html>
