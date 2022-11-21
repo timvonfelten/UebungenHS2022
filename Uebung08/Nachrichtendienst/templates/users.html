@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Users</title>
+            <link rel="stylesheet" href="https://unpkg.com/twinklecss@1.2.1/twinkle.min.css"/>
+        </head>
+    </head>
+    <body style="background-color: #F1F1F1;">
+        <div class="bg-black">
+            <ul class="m-0 p-0 text-white flex">
+                <li class="float"><a class="block p-4" href="login">Login</a></li>
+                <li class="float"><a class="block p-4" href="notes">News</a></li>
+                <li class="float"><a class="block p-4" href="users">Users</a></li>
+                <li class="float"><a class="block bg-black p-4" href="new">New Post</a></li>
+
+              </ul>
+        </div>
+        
+        <div class="m-10">
+            <h1 class="font-bold text-xl mb-5">Registerd Users</h1>
+            <ul>
+            {% for user in users %}
+              <li><a href="users/{{user}}" style="text-decoration: underline;">@{{ user }}</a></li>
+            {% endfor %}
+            </ul>
+    </div>
+    </body>
+
+
+</html>
